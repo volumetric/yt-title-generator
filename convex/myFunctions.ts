@@ -16,7 +16,7 @@ export const listNumbers = query({
   handler: async (ctx, args) => {
     // Read the database as many times as you need here.
     // See https://docs.convex.dev/database/reading-data.
-    console.log("Hello Vinit!!")
+    // console.log("Hello Vinit!!")
     const numbers = await ctx.db
       .query('numbers')
       // Ordered by _creationTime, return most recent
