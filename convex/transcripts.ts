@@ -9,7 +9,7 @@ export const getYouTubeTranscript = internalAction({
     args: {
         url: v.string(),
     },
-    handler: async (ctx, args) => {
+    handler: async (_ctx, args) => {
         const apiKey = process.env.SUPADATA_API_KEY
         if (!apiKey) {
             throw new Error('SUPADATA_API_KEY not set. Get a free key at https://supadata.ai')
@@ -39,7 +39,7 @@ export const generateSummary = internalAction({
     args: {
         transcript: v.string(),
     },
-    handler: async (ctx, args) => {
+    handler: async (_ctx, args) => {
         console.log("Generating summary")
         const openai = new OpenAI({
             apiKey: process.env.OPENAI_API_KEY,

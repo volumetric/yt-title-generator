@@ -13,7 +13,7 @@ export const listNumbers = query({
   },
 
   // Query implementation.
-  handler: async (ctx, args) => {
+  handler: async (ctx) => {
     // Read the database as many times as you need here.
     // See https://docs.convex.dev/database/reading-data.
     // console.log("Hello Vinit!!")
