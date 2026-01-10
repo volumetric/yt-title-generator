@@ -13,7 +13,8 @@ export default defineConfig({
     tsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
-    tanstackStart(),
+    tanstackStart({
+    }),
     viteReact(),
   ],
 })
